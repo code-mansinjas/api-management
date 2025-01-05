@@ -21,6 +21,7 @@ if (MODELS_SYNC == 'true') {
 server.use(express.json())
 server.use(morgan('dev'))
 
+server.get('/',(req,res)=> res.json({ message: "Server Running" }))
 server.use('/api', route);
 
 server.use((err: ErrorRequestHandler, req: Request, res: Response, next: NextFunction) => {
