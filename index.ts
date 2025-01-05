@@ -11,11 +11,11 @@ const MODELS_SYNC = process.env.MODELS_SYNC
 
 
 // Database Connection Starts
-if (MODELS_SYNC == 'true') {
-  sequelize.sync({})
-} else {
-  sequelize.authenticate()
-}
+// if (MODELS_SYNC == 'true') {
+//   sequelize.sync({})
+// } else {
+//   sequelize.authenticate()
+// }
 // Database Connection Ends
 
 server.use(express.json())
