@@ -5,16 +5,11 @@
   "main": "dist/app.js",
   "scripts": {
     "dev": "npx nodemon",
-    "start": "nodemon src/index.ts",
+    "start": "tsc && node dist/index.js",
     "lint": "eslint . --ext .ts",
     "add-build": "git add dist",
     "ts.check": "tsc --project tsconfig.json",
-    "build": "rimraf dist && tsc",
-    "pre-commit": [
-      "ts.check",
-      "build",
-      "add-build"
-    ]
+    "build": "rimraf dist && tsc"
   },
   "dependencies": {
     "@types/bcrypt": "^5.0.2",
