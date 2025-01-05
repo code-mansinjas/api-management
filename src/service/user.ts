@@ -3,7 +3,7 @@ import GlobalResponse from '../types/response'
 import UserAttributes from '../types/user'
 import { Op } from 'sequelize'
 import * as bcrypt from 'bcrypt'
-import JWT from '../../utils/jwt'
+import JWT from '../utils/jwt'
 
 
 const get = async (): Promise<GlobalResponse> => {

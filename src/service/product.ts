@@ -3,7 +3,7 @@ import GlobalResponse from '../types/response'
 import ProductAttributes from '../types/product'
 import Category from '../models/category'
 import { Response, Request } from 'express'
-import { QueryExtractor } from "../../utils/helper"
+import { QueryExtractor } from "../utils/helper"
 
 const get = async (req: Request): Promise<GlobalResponse> => {
     const { include, ...rest } = QueryExtractor(req)
