@@ -5,11 +5,16 @@
   "main": "dist/app.js",
   "scripts": {
     "dev": "npx nodemon",
-    "start": "tsc && node dist/index.js",
+    "start": "nodemon src/index.ts",
     "lint": "eslint . --ext .ts",
     "add-build": "git add dist",
     "ts.check": "tsc --project tsconfig.json",
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc",
+    "pre-commit": [
+      "ts.check",
+      "build",
+      "add-build"
+    ]
   },
   "dependencies": {
     "@types/bcrypt": "^5.0.2",
@@ -38,7 +43,7 @@
     "eslint": "^8.56.0",
     "nodemon": "^3.1.0",
     "pre-commit": "^1.2.2",
-    "rimraf": "^5.0.5",
+    "rimraf": "^5.0.10",
     "sequelize-cli": "^6.6.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
