@@ -14,7 +14,8 @@ const get = async (req: Request): Promise<GlobalResponse> => {
                 as: 'category_data'
             }
         ]),
-        ...rest
+        ...rest,
+        raw:true
     })
     const resultCount = await Product.count({})
     if (result && result.length) {

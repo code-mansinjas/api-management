@@ -1,6 +1,8 @@
 import { Model, Optional } from 'sequelize';
 import { DataType } from 'sequelize-typescript'
-import { sequelize } from '.'
+import {
+    sequelize
+} from './index'
 import CategoryAttributes from '../types/category';
 import Product from './product';
 

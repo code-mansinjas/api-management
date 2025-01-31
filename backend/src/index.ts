@@ -1,8 +1,8 @@
-import route from './src/routes'
+import route from './routes'
 import morgan from 'morgan'
 import { config } from 'dotenv'
 import express, { Request, Response, ErrorRequestHandler, NextFunction } from 'express';
-import { sequelize } from './src/models'
+import { sequelize } from './models'
 config();
 
 const server = express();
